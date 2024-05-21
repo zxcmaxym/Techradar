@@ -8,6 +8,14 @@
 
 A library that generates an interactive radar, inspired by [thoughtworks.com/radar](http://thoughtworks.com/radar).
 
+## Run in Docker for development 
+```
+$ sudo docker pull wwwthoughtworks/build-your-own-radar:v1.1.4
+$ sudo docker run --rm -p 8080:80 -e SERVER_NAMES="localhost 127.0.0.1" -v $PROJECT_FOLDER/:/opt/build-your-own-radar/files --name radar wwwthoughtworks/build-your-own-radar:v1.1.4
+```
+Provided your radar file is called `Datalan_TR_2024_01.csv` your path to the radar file will be `http://localhost:8080/files/Datalan_TR_2024_01.csv` and you can access the radar directly via `http://localhost:8080/?documentId=http%3A%2F%2Flocalhost%3A8080%2Ffiles%2FDatalan_TR_2024_01.csv`.
+
+
 ## Demo
 
 You can see this in action at https://radar.thoughtworks.com. If you plug in [this data](https://docs.google.com/spreadsheets/d/1GBX3-jzlGkiKpYHF9RvVtu6GxSrco5OYTBv9YsOTXVg/edit#gid=0) you'll see [this visualization](https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1GBX3-jzlGkiKpYHF9RvVtu6GxSrco5OYTBv9YsOTXVg%2Fedit%23gid%3D0).
