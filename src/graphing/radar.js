@@ -115,7 +115,7 @@ const Radar = function (size, radar) {
           .attr('y', CENTER + 4)
           .attr('x', CENTER + (ringCalculator.getRadius(i) + ringCalculator.getRadius(i + 1)) / 2)
           .attr('text-anchor', 'middle')
-          .text(ring.name())
+          .text(ring.name()) 
       } else {
         quadrantGroup
           .append('text')
@@ -139,6 +139,9 @@ const Radar = function (size, radar) {
           .attr('x', CENTER + (ringCalculator.getRingRadius(i) + ringCalculator.getRingRadius(i + 1)) / 2)
           .attr('text-anchor', 'middle')
           .text(ringNameWithEllipsis)
+	  .append('title')
+          .text('Test')
+	  
       } else {
         quadrantGroup
           .append('text')
@@ -146,7 +149,9 @@ const Radar = function (size, radar) {
           .attr('y', CENTER + 5)
           .attr('x', CENTER - (ringCalculator.getRingRadius(i) + ringCalculator.getRingRadius(i + 1)) / 2)
           .attr('text-anchor', 'middle')
-          .text(ringNameWithEllipsis)
+          .text(ringNameWithEllipsis) 
+	  .append('title')
+	  .text('Test')
       }
     })
   }
